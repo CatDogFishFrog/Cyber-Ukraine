@@ -16,5 +16,27 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Col_Variable_ValueChanged(object sender, EventArgs e)
+        {
+            char c;
+            
+        }
     }
 }
