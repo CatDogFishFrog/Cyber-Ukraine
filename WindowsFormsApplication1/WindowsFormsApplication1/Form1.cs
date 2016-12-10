@@ -181,6 +181,7 @@ namespace WindowsFormsApplication1
                     Map.Rows[6].HeaderCell.Value = "101";
                     Map.Rows[7].HeaderCell.Value = "100";
                     break;
+                default: MessageBox.Show("Ti cho pituh progu palamal");break;
             }
         }
 

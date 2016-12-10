@@ -46,12 +46,12 @@
             // 
             this.Col_Variable.Location = new System.Drawing.Point(12, 51);
             this.Col_Variable.Maximum = new decimal(new int[] {
-            8,
+            7,
             0,
             0,
             0});
             this.Col_Variable.Minimum = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -60,7 +60,7 @@
             this.Col_Variable.TabIndex = 1;
             this.Col_Variable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Col_Variable.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -94,7 +94,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(905, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(889, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,19 +129,22 @@
             // 
             this.Map.AllowUserToAddRows = false;
             this.Map.AllowUserToDeleteRows = false;
+            this.Map.BackgroundColor = System.Drawing.Color.Khaki;
             this.Map.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Map.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Map.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Map.GridColor = System.Drawing.SystemColors.Highlight;
             this.Map.Location = new System.Drawing.Point(12, 106);
             this.Map.Name = "Map";
-            this.Map.Size = new System.Drawing.Size(841, 421);
+            this.Map.RowHeadersWidth = 60;
+            this.Map.Size = new System.Drawing.Size(877, 205);
             this.Map.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 536);
+            this.ClientSize = new System.Drawing.Size(889, 316);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Unit);
