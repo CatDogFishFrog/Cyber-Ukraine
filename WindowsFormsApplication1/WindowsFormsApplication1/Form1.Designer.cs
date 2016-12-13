@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Col_Variable = new System.Windows.Forms.NumericUpDown();
-            this.Unit = new System.Windows.Forms.Button();
+            this.Paste = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.меню1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,15 +67,17 @@
             0,
             0});
             this.Col_Variable.ValueChanged += new System.EventHandler(this.Col_Variable_ValueChanged);
+            this.Col_Variable.Enter += new System.EventHandler(this.Col_Variable_ValueChanged);
             // 
-            // Unit
+            // Paste
             // 
-            this.Unit.Location = new System.Drawing.Point(12, 77);
-            this.Unit.Name = "Unit";
-            this.Unit.Size = new System.Drawing.Size(75, 23);
-            this.Unit.TabIndex = 2;
-            this.Unit.Text = "Склеить";
-            this.Unit.UseVisualStyleBackColor = true;
+            this.Paste.Location = new System.Drawing.Point(12, 77);
+            this.Paste.Name = "Paste";
+            this.Paste.Size = new System.Drawing.Size(75, 23);
+            this.Paste.TabIndex = 2;
+            this.Paste.Text = "Склеить";
+            this.Paste.UseVisualStyleBackColor = true;
+            this.Paste.Click += new System.EventHandler(this.Paste_Click);
             // 
             // label1
             // 
@@ -166,7 +168,7 @@
             this.Controls.Add(this.VarF);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Unit);
+            this.Controls.Add(this.Paste);
             this.Controls.Add(this.Col_Variable);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
@@ -183,7 +185,7 @@
 
         #endregion
         private System.Windows.Forms.NumericUpDown Col_Variable;
-        private System.Windows.Forms.Button Unit;
+        private System.Windows.Forms.Button Paste;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem меню1ToolStripMenuItem;

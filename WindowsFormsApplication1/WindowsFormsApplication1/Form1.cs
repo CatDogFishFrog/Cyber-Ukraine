@@ -19,13 +19,13 @@ namespace WindowsFormsApplication1
         private void Col_Variable_ValueChanged(object sender, EventArgs e)
         {
             string @var = Col_Variable.Text;
-           switch (@var)
+            switch (@var)
             {
                 case "2":
                     Map.Rows.Clear();
                     VarF.Text = "X1";
                     VarS.Text = "X2";
-                    while (Map.Columns.Count !=0)
+                    while (Map.Columns.Count != 0)
                     {
                         Map.Columns.RemoveAt(0);
                     }
@@ -193,14 +193,23 @@ namespace WindowsFormsApplication1
                     Map.Rows[6].HeaderCell.Value = "101";
                     Map.Rows[7].HeaderCell.Value = "100";
                     break;
-                default: MessageBox.Show("Недопустипое значение");break;
+                default: MessageBox.Show("Ti cho pituh progu palamal"); break;
             }
-        }
+            }
 
         private void Form1_Load(object sender, EventArgs e)
         {
           
         }
 
+        private void Paste_Click(object sender, EventArgs e)
+        {
+            Random ran = new Random();
+            int r, g, b;
+            r = ran.Next(256);
+            g = ran.Next(256);
+            b = ran.Next(256);
+            Paste.BackColor = Color.FromArgb(r,g,b);
+        }
     }
 }

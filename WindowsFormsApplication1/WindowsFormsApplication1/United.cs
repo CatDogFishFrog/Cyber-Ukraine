@@ -8,10 +8,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public  class M_Build
+    public  class M_Pas
     {
         public void Var_1()
         {
+
         }
     }
 }
