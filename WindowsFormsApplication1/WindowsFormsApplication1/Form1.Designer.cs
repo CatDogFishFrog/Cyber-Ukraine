@@ -37,6 +37,8 @@
             this.менюnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.Map = new System.Windows.Forms.DataGridView();
+            this.VarF = new System.Windows.Forms.TextBox();
+            this.VarS = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Col_Variable)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Map)).BeginInit();
@@ -57,7 +59,7 @@
             0});
             this.Col_Variable.Name = "Col_Variable";
             this.Col_Variable.Size = new System.Drawing.Size(33, 20);
-            this.Col_Variable.TabIndex = 1;
+            this.Col_Variable.TabIndex = 2;
             this.Col_Variable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Col_Variable.Value = new decimal(new int[] {
             2,
@@ -94,7 +96,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(889, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(926, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -134,17 +136,34 @@
             this.Map.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Map.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Map.GridColor = System.Drawing.SystemColors.Highlight;
-            this.Map.Location = new System.Drawing.Point(12, 106);
+            this.Map.Location = new System.Drawing.Point(37, 129);
             this.Map.Name = "Map";
             this.Map.RowHeadersWidth = 60;
             this.Map.Size = new System.Drawing.Size(877, 205);
             this.Map.TabIndex = 5;
             // 
+            // VarF
+            // 
+            this.VarF.Location = new System.Drawing.Point(32, 103);
+            this.VarF.Name = "VarF";
+            this.VarF.Size = new System.Drawing.Size(100, 20);
+            this.VarF.TabIndex = 6;
+            // 
+            // VarS
+            // 
+            this.VarS.Location = new System.Drawing.Point(12, 129);
+            this.VarS.Multiline = true;
+            this.VarS.Name = "VarS";
+            this.VarS.Size = new System.Drawing.Size(19, 94);
+            this.VarS.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 316);
+            this.ClientSize = new System.Drawing.Size(926, 346);
+            this.Controls.Add(this.VarS);
+            this.Controls.Add(this.VarF);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Unit);
@@ -176,6 +195,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C2;
         private System.Windows.Forms.DataGridViewTextBoxColumn C3;
         private System.Windows.Forms.DataGridViewTextBoxColumn C4;
+        private System.Windows.Forms.TextBox VarF;
+        private System.Windows.Forms.TextBox VarS;
     }
 }
 

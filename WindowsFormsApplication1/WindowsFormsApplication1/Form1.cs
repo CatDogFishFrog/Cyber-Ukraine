@@ -23,7 +23,9 @@ namespace WindowsFormsApplication1
             {
                 case "2":
                     Map.Rows.Clear();
-                    while(Map.Columns.Count !=0)
+                    VarF.Text = "X1";
+                    VarS.Text = "X2";
+                    while (Map.Columns.Count !=0)
                     {
                         Map.Columns.RemoveAt(0);
                     }
@@ -37,6 +39,8 @@ namespace WindowsFormsApplication1
                     break;
                 case "3":
                     Map.Rows.Clear();
+                    VarF.Text = "X1 X2";
+                    VarS.Text = "X3";
                     while (Map.Columns.Count != 0)
                     {
                         Map.Columns.RemoveAt(0);
@@ -55,6 +59,8 @@ namespace WindowsFormsApplication1
                     break;
                 case "4":
                     Map.Rows.Clear();
+                    VarF.Text = "X1 X2";
+                    VarS.Text = "X3\n\n X4";
                     while (Map.Columns.Count != 0)
                     {
                         Map.Columns.RemoveAt(0);
@@ -75,6 +81,8 @@ namespace WindowsFormsApplication1
                     break;
                 case "5":
                     Map.Rows.Clear();
+                    VarF.Text = "X1 X2 X3";
+                    VarS.Text = "X4\n\n X5";
                     while (Map.Columns.Count != 0)
                     {
                         Map.Columns.RemoveAt(0);
@@ -103,6 +111,8 @@ namespace WindowsFormsApplication1
                     break;
                 case "6":
                     Map.Rows.Clear();
+                    VarF.Text = "X1 X2 X3";
+                    VarS.Text = "X4\n\n X5\n\n X6";
                     while (Map.Columns.Count != 0)
                     {
                         Map.Columns.RemoveAt(0);
@@ -135,6 +145,8 @@ namespace WindowsFormsApplication1
                     break;
                 case "7":
                     Map.Rows.Clear();
+                    VarF.Text = "X1 X2 X3 X4";
+                    VarS.Text = "X5\n\n X6\n\n X7";
                     while (Map.Columns.Count != 0)
                     {
                         Map.Columns.RemoveAt(0);
@@ -181,13 +193,13 @@ namespace WindowsFormsApplication1
                     Map.Rows[6].HeaderCell.Value = "101";
                     Map.Rows[7].HeaderCell.Value = "100";
                     break;
-                default: MessageBox.Show("Ti cho pituh progu palamal");break;
+                default: MessageBox.Show("Недопустипое значение");break;
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+          
         }
 
     }
