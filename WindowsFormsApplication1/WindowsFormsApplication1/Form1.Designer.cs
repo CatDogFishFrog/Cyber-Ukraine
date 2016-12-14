@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Col_Variable = new System.Windows.Forms.NumericUpDown();
             this.Paste = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -39,39 +38,16 @@
             this.Map = new System.Windows.Forms.DataGridView();
             this.VarF = new System.Windows.Forms.TextBox();
             this.VarS = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Col_Variable)).BeginInit();
+            this.Outp = new System.Windows.Forms.TextBox();
+            this.Build = new System.Windows.Forms.Button();
+            this.VarCol = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Map)).BeginInit();
             this.SuspendLayout();
             // 
-            // Col_Variable
-            // 
-            this.Col_Variable.Location = new System.Drawing.Point(12, 51);
-            this.Col_Variable.Maximum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.Col_Variable.Minimum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.Col_Variable.Name = "Col_Variable";
-            this.Col_Variable.Size = new System.Drawing.Size(33, 20);
-            this.Col_Variable.TabIndex = 2;
-            this.Col_Variable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Col_Variable.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.Col_Variable.ValueChanged += new System.EventHandler(this.Col_Variable_ValueChanged);
-            this.Col_Variable.Enter += new System.EventHandler(this.Col_Variable_ValueChanged);
-            // 
             // Paste
             // 
-            this.Paste.Location = new System.Drawing.Point(12, 77);
+            this.Paste.Location = new System.Drawing.Point(95, 80);
             this.Paste.Name = "Paste";
             this.Paste.Size = new System.Drawing.Size(75, 23);
             this.Paste.TabIndex = 2;
@@ -159,22 +135,48 @@
             this.VarS.Size = new System.Drawing.Size(19, 94);
             this.VarS.TabIndex = 7;
             // 
+            // Outp
+            // 
+            this.Outp.Location = new System.Drawing.Point(225, 27);
+            this.Outp.Multiline = true;
+            this.Outp.Name = "Outp";
+            this.Outp.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Outp.Size = new System.Drawing.Size(545, 96);
+            this.Outp.TabIndex = 8;
+            // 
+            // Build
+            // 
+            this.Build.Location = new System.Drawing.Point(95, 51);
+            this.Build.Name = "Build";
+            this.Build.Size = new System.Drawing.Size(75, 23);
+            this.Build.TabIndex = 9;
+            this.Build.Text = "Построить";
+            this.Build.UseVisualStyleBackColor = true;
+            this.Build.Click += new System.EventHandler(this.Build_Click);
+            // 
+            // VarCol
+            // 
+            this.VarCol.Location = new System.Drawing.Point(12, 53);
+            this.VarCol.Name = "VarCol";
+            this.VarCol.Size = new System.Drawing.Size(77, 20);
+            this.VarCol.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 346);
+            this.Controls.Add(this.VarCol);
+            this.Controls.Add(this.Build);
+            this.Controls.Add(this.Outp);
             this.Controls.Add(this.VarS);
             this.Controls.Add(this.VarF);
             this.Controls.Add(this.Map);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Paste);
-            this.Controls.Add(this.Col_Variable);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "Минимизация карты Карно";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Col_Variable)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Map)).EndInit();
@@ -184,7 +186,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.NumericUpDown Col_Variable;
         private System.Windows.Forms.Button Paste;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -199,6 +200,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C4;
         private System.Windows.Forms.TextBox VarF;
         private System.Windows.Forms.TextBox VarS;
+        private System.Windows.Forms.TextBox Outp;
+        private System.Windows.Forms.Button Build;
+        private System.Windows.Forms.TextBox VarCol;
     }
 }
 

@@ -16,9 +16,55 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        private void Col_Variable_ValueChanged(object sender, EventArgs e)
+        private void Paste_Click(object sender, EventArgs e)
         {
-            string @var = Col_Variable.Text;
+            string @var = VarCol.Text;
+            switch (@var)
+            {
+                case "2":
+                    if (Map.Rows[0].Cells[0].Value.ToString() == "1")
+                    {
+                        Random ran = new Random();
+                        int r, g, b;
+                        r = ran.Next(256);
+                        g = ran.Next(256);
+                        b = ran.Next(256);
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.FromArgb(r, g, b);
+                    }
+                    if (Map.Rows[0].Cells[1].Value.ToString() == "1")
+                    {
+                        Random ran = new Random();
+                        int r, g, b;
+                        r = ran.Next(256);
+                        g = ran.Next(256);
+                        b = ran.Next(256);
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.FromArgb(r, g, b);
+                    }
+                    if (Map.Rows[1].Cells[0].Value.ToString() == "1")
+                    {
+                        Random ran = new Random();
+                        int r, g, b;
+                        r = ran.Next(256);
+                        g = ran.Next(256);
+                        b = ran.Next(256);
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.FromArgb(r, g, b);
+                    }
+                    if (Map.Rows[1].Cells[1].Value.ToString() == "1")
+                    {
+                        Random ran = new Random();
+                        int r, g, b;
+                        r = ran.Next(256);
+                        g = ran.Next(256);
+                        b = ran.Next(256);
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(r, g, b);
+                    }
+                    ; break;
+            }
+        }
+
+        private void Build_Click(object sender, EventArgs e)
+        {
+            string @var = VarCol.Text;
             switch (@var)
             {
                 case "2":
@@ -36,7 +82,7 @@ namespace WindowsFormsApplication1
                     Map.Rows.Add(2);
                     Map.Rows[0].HeaderCell.Value = "0";
                     Map.Rows[1].HeaderCell.Value = "1";
-                    break;
+                        break;
                 case "3":
                     Map.Rows.Clear();
                     VarF.Text = "X1 X2";
@@ -195,21 +241,6 @@ namespace WindowsFormsApplication1
                     break;
                 default: MessageBox.Show("Ti cho pituh progu palamal"); break;
             }
-            }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void Paste_Click(object sender, EventArgs e)
-        {
-            Random ran = new Random();
-            int r, g, b;
-            r = ran.Next(256);
-            g = ran.Next(256);
-            b = ran.Next(256);
-            Paste.BackColor = Color.FromArgb(r,g,b);
         }
     }
 }
