@@ -58,7 +58,34 @@ namespace WindowsFormsApplication1
                         b = ran.Next(256);
                         Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(r, g, b);
                     }
-                    ; break;
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && ( Map.Rows[0].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.FromArgb(50, 90, 10);
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.FromArgb(50, 90, 10);
+                    }
+                    if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.FromArgb(65, 96, 142);
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(65, 96, 142);
+                    }
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.FromArgb(50, 90, 10);
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.FromArgb(50, 90, 10);
+                    }
+                    if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.FromArgb(50, 90, 10);
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(50, 90, 10);
+                    }
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Plum;
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Plum;
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Plum;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Plum;
+                    }
+                        ; break;
             }
         }
 
