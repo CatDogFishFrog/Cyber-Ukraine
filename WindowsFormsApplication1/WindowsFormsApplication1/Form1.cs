@@ -18,65 +18,69 @@ namespace WindowsFormsApplication1
         }
         private void Paste_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < Map.Rows.Count; i++)
+            {
+                for (int j = 0; j < Map.Columns.Count; j++)
+                {
+                    Map.Rows[i].Cells[j].Style.BackColor = Color.White;
+                }
+            }
+            for (int i = 0; i < Map.Rows.Count; i++)
+            {
+                for (int j = 0; j < Map.Columns.Count; j++)
+                {
+                    if (Map.Rows[i].Cells[j].Value == null)
+                        Map.Rows[i].Cells[j].Value = "0";
+                }
+            }
+            Outp.Clear();
             string @var = VarCol.Text;
             switch (@var)
             {
                 case "2":
                     if (Map.Rows[0].Cells[0].Value.ToString() == "1")
                     {
-                        Random ran = new Random();
-                        int r, g, b;
-                        r = ran.Next(256);
-                        g = ran.Next(256);
-                        b = ran.Next(256);
-                        Map.Rows[0].Cells[0].Style.BackColor = Color.FromArgb(r, g, b);
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.AliceBlue;
+                        Outp.Text += "!X1!X2\n";
                     }
                     if (Map.Rows[0].Cells[1].Value.ToString() == "1")
                     {
-                        Random ran = new Random();
-                        int r, g, b;
-                        r = ran.Next(256);
-                        g = ran.Next(256);
-                        b = ran.Next(256);
-                        Map.Rows[0].Cells[1].Style.BackColor = Color.FromArgb(r, g, b);
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Azure;
+                        Outp.Text += "X1!X2\n";
                     }
                     if (Map.Rows[1].Cells[0].Value.ToString() == "1")
                     {
-                        Random ran = new Random();
-                        int r, g, b;
-                        r = ran.Next(256);
-                        g = ran.Next(256);
-                        b = ran.Next(256);
-                        Map.Rows[1].Cells[0].Style.BackColor = Color.FromArgb(r, g, b);
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Beige;
+                        Outp.Text += "!X1X2\n";
                     }
                     if (Map.Rows[1].Cells[1].Value.ToString() == "1")
                     {
-                        Random ran = new Random();
-                        int r, g, b;
-                        r = ran.Next(256);
-                        g = ran.Next(256);
-                        b = ran.Next(256);
-                        Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(r, g, b);
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Bisque;
+                        Outp.Text += "X1X2\n";
                     }
-                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && ( Map.Rows[0].Cells[1].Value.ToString() == "1"))
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1"))
                     {
-                        Map.Rows[0].Cells[0].Style.BackColor = Color.FromArgb(50, 90, 10);
-                        Map.Rows[0].Cells[1].Style.BackColor = Color.FromArgb(50, 90, 10);
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.BlanchedAlmond;
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.BlanchedAlmond;
+                        Outp.Text += "!X1!X2+X1!X2\n";
                     }
                     if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
-                        Map.Rows[1].Cells[0].Style.BackColor = Color.FromArgb(65, 96, 142);
-                        Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(65, 96, 142);
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.CadetBlue;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.CadetBlue;
+                        Outp.Text += "!X1X2+X1X2\n";
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
                     {
-                        Map.Rows[0].Cells[0].Style.BackColor = Color.FromArgb(50, 90, 10);
-                        Map.Rows[1].Cells[0].Style.BackColor = Color.FromArgb(50, 90, 10);
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Chocolate;
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Chocolate;
+                        Outp.Text += "!X1!X2+!X1X2\n";
                     }
                     if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
-                        Map.Rows[0].Cells[1].Style.BackColor = Color.FromArgb(50, 90, 10);
-                        Map.Rows[1].Cells[1].Style.BackColor = Color.FromArgb(50, 90, 10);
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Coral;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Coral;
+                        Outp.Text += "X1!X2+X1X2\n";
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
@@ -86,7 +90,148 @@ namespace WindowsFormsApplication1
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Plum;
                     }
                         ; break;
-            }
+                case "3":
+                    if (Map.Rows[0].Cells[0].Value.ToString() == "1")
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Gray;
+                    }
+                    if (Map.Rows[0].Cells[1].Value.ToString() == "1")
+                    {
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.MediumPurple;
+                    }
+                    if (Map.Rows[0].Cells[2].Value.ToString() == "1")
+                    {
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.BlueViolet;
+                    }
+                    if (Map.Rows[0].Cells[3].Value.ToString() == "1")
+                    {
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.Brown;
+                    }
+                    if (Map.Rows[1].Cells[0].Value.ToString() == "1")
+                    {
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Maroon;
+                    }
+                    if (Map.Rows[1].Cells[1].Value.ToString() == "1")
+                    {
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Cyan;
+                    }
+                    if (Map.Rows[1].Cells[2].Value.ToString() == "1")
+                    {
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.DarkBlue;
+                    }
+                    if (Map.Rows[1].Cells[3].Value.ToString() == "1")
+                    {
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.DarkCyan;
+                    }
+                    //
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Violet;
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Violet;
+                    }
+                    if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Khaki;
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.Khaki;
+                    }
+                    if ((Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.SaddleBrown;
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.SaddleBrown;
+                    }
+                    if ((Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[0].Cells[0].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.Red;
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Red;
+                    }
+                    //
+                    if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Yellow;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Yellow;
+                    }
+                    if ((Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1"))
+                    {
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Orchid;
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.Orchid;
+                    }
+                    if ((Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.Purple;
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.Purple;
+                    }
+                    if ((Map.Rows[1].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
+                    {
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.Gainsboro;
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Gainsboro;
+                    }
+                    //
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Olive;
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Olive;
+                    }
+                    if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Ivory;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Ivory;
+                    }
+                    if ((Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.PaleGreen;
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.PaleGreen;
+                    }
+                    if ((Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.Orange;
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.Orange;
+                    }
+                    //
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Tomato;
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Tomato;
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.Tomato;
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.Tomato;
+                    }
+                    if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Moccasin;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Moccasin;
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.Moccasin;
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.Moccasin;
+                    }
+                    //
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Blue;
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Blue;
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.Blue;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Blue;
+                    }
+                    if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[1].Style.BackColor = Color.Gold;
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.Gold;
+                        Map.Rows[1].Cells[1].Style.BackColor = Color.Gold;
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.Gold;
+                    }
+                    if ((Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[2].Style.BackColor = Color.Green;
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.Green;
+                        Map.Rows[1].Cells[2].Style.BackColor = Color.Green;
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.Green;
+                    }
+                    if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
+                    {
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.DarkRed;
+                        Map.Rows[1].Cells[0].Style.BackColor = Color.DarkRed;
+                        Map.Rows[0].Cells[3].Style.BackColor = Color.DarkRed;
+                        Map.Rows[1].Cells[3].Style.BackColor = Color.DarkRed;
+                    }
+                    ; break;
+        }
         }
 
         private void Build_Click(object sender, EventArgs e)
@@ -266,7 +411,7 @@ namespace WindowsFormsApplication1
                     Map.Rows[6].HeaderCell.Value = "101";
                     Map.Rows[7].HeaderCell.Value = "100";
                     break;
-                default: MessageBox.Show("Ti cho pituh progu palamal"); break;
+                default: MessageBox.Show("Недопустимое значение!\nКоличество допустимых переменных от 2-7."); break;
             }
         }
     }

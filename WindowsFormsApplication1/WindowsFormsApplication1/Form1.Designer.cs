@@ -38,9 +38,9 @@
             this.Map = new System.Windows.Forms.DataGridView();
             this.VarF = new System.Windows.Forms.TextBox();
             this.VarS = new System.Windows.Forms.TextBox();
-            this.Outp = new System.Windows.Forms.TextBox();
             this.Build = new System.Windows.Forms.Button();
             this.VarCol = new System.Windows.Forms.TextBox();
+            this.Outp = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Map)).BeginInit();
             this.SuspendLayout();
@@ -122,27 +122,22 @@
             // 
             // VarF
             // 
+            this.VarF.Enabled = false;
             this.VarF.Location = new System.Drawing.Point(32, 103);
             this.VarF.Name = "VarF";
+            this.VarF.ReadOnly = true;
             this.VarF.Size = new System.Drawing.Size(100, 20);
             this.VarF.TabIndex = 6;
             // 
             // VarS
             // 
+            this.VarS.Enabled = false;
             this.VarS.Location = new System.Drawing.Point(12, 129);
             this.VarS.Multiline = true;
             this.VarS.Name = "VarS";
+            this.VarS.ReadOnly = true;
             this.VarS.Size = new System.Drawing.Size(19, 94);
             this.VarS.TabIndex = 7;
-            // 
-            // Outp
-            // 
-            this.Outp.Location = new System.Drawing.Point(225, 27);
-            this.Outp.Multiline = true;
-            this.Outp.Name = "Outp";
-            this.Outp.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Outp.Size = new System.Drawing.Size(545, 96);
-            this.Outp.TabIndex = 8;
             // 
             // Build
             // 
@@ -161,14 +156,23 @@
             this.VarCol.Size = new System.Drawing.Size(77, 20);
             this.VarCol.TabIndex = 10;
             // 
+            // Outp
+            // 
+            this.Outp.Location = new System.Drawing.Point(220, 27);
+            this.Outp.Name = "Outp";
+            this.Outp.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Outp.Size = new System.Drawing.Size(460, 96);
+            this.Outp.TabIndex = 11;
+            this.Outp.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 346);
+            this.Controls.Add(this.Outp);
             this.Controls.Add(this.VarCol);
             this.Controls.Add(this.Build);
-            this.Controls.Add(this.Outp);
             this.Controls.Add(this.VarS);
             this.Controls.Add(this.VarF);
             this.Controls.Add(this.Map);
@@ -200,9 +204,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn C4;
         private System.Windows.Forms.TextBox VarF;
         private System.Windows.Forms.TextBox VarS;
-        private System.Windows.Forms.TextBox Outp;
         private System.Windows.Forms.Button Build;
         private System.Windows.Forms.TextBox VarCol;
+        private System.Windows.Forms.RichTextBox Outp;
     }
 }
 
