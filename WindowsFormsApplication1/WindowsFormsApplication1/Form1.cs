@@ -40,47 +40,79 @@ namespace WindowsFormsApplication1
                 case "2":
                     if (Map.Rows[0].Cells[0].Value.ToString() == "1")
                     {
-                        Map.Rows[0].Cells[0].Style.BackColor = Color.AliceBlue;
+                        Map.Rows[0].Cells[0].Style.BackColor = Color.Gold;
                         Outp.Text += "!X1!X2\n";
+                        int my1stPosition = Outp.Find("!X1!X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "!X1!X2".Length;
+                        Outp.SelectionColor = Color.Gold;
                     }
                     if (Map.Rows[0].Cells[1].Value.ToString() == "1")
                     {
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Azure;
                         Outp.Text += "X1!X2\n";
+                        int my1stPosition = Outp.Find("X1!X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "X1!X2".Length;
+                        Outp.SelectionColor = Color.Azure;
                     }
                     if (Map.Rows[1].Cells[0].Value.ToString() == "1")
                     {
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Beige;
                         Outp.Text += "!X1X2\n";
+                        int my1stPosition = Outp.Find("!X1X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "!X1X2".Length;
+                        Outp.SelectionColor = Color.Beige;
                     }
                     if (Map.Rows[1].Cells[1].Value.ToString() == "1")
                     {
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Bisque;
                         Outp.Text += "X1X2\n";
+                        int my1stPosition = Outp.Find("X1X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "X1X2".Length;
+                        Outp.SelectionColor = Color.Bisque;
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[0].Style.BackColor = Color.BlanchedAlmond;
                         Map.Rows[0].Cells[1].Style.BackColor = Color.BlanchedAlmond;
                         Outp.Text += "!X1!X2+X1!X2\n";
+                        int my1stPosition = Outp.Find("!X1!X2 + X1!X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "!X1!X2 + X1!X2".Length;
+                        Outp.SelectionColor = Color.BlanchedAlmond;
                     }
                     if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
                         Map.Rows[1].Cells[0].Style.BackColor = Color.CadetBlue;
                         Map.Rows[1].Cells[1].Style.BackColor = Color.CadetBlue;
                         Outp.Text += "!X1X2+X1X2\n";
+                        int my1stPosition = Outp.Find("!X1X2+X1X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "!X1X2+X1X2".Length;
+                        Outp.SelectionColor = Color.CadetBlue;
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[0].Style.BackColor = Color.Chocolate;
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Chocolate;
                         Outp.Text += "!X1!X2+!X1X2\n";
+                        int my1stPosition = Outp.Find("!X1!X2+!X1X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "!X1!X2+!X1X2".Length;
+                        Outp.SelectionColor = Color.Chocolate;
                     }
                     if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Coral;
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Coral;
                         Outp.Text += "X1!X2+X1X2\n";
+                        int my1stPosition = Outp.Find("X1!X2+X1X2");
+                        Outp.SelectionStart = my1stPosition;
+                        Outp.SelectionLength = "X1!X2+X1X2".Length;
+                        Outp.SelectionColor = Color.Coral;
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
@@ -94,97 +126,118 @@ namespace WindowsFormsApplication1
                     if (Map.Rows[0].Cells[0].Value.ToString() == "1")
                     {
                         Map.Rows[0].Cells[0].Style.BackColor = Color.Gray;
+                        Outp.Text += "!X1!X2!X3\n";
                     }
                     if (Map.Rows[0].Cells[1].Value.ToString() == "1")
                     {
                         Map.Rows[0].Cells[1].Style.BackColor = Color.MediumPurple;
+                        Outp.Text += "!X1X2!X3\n";
                     }
                     if (Map.Rows[0].Cells[2].Value.ToString() == "1")
                     {
                         Map.Rows[0].Cells[2].Style.BackColor = Color.BlueViolet;
+                        Outp.Text += "X1X2!X3\n";
                     }
                     if (Map.Rows[0].Cells[3].Value.ToString() == "1")
                     {
                         Map.Rows[0].Cells[3].Style.BackColor = Color.Brown;
+                        Outp.Text += "X1!X2!X3\n";
                     }
                     if (Map.Rows[1].Cells[0].Value.ToString() == "1")
                     {
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Maroon;
+                        Outp.Text += "!X1!X2X3\n";
                     }
                     if (Map.Rows[1].Cells[1].Value.ToString() == "1")
                     {
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Cyan;
+                        Outp.Text += "!X1X2X3\n";
                     }
                     if (Map.Rows[1].Cells[2].Value.ToString() == "1")
                     {
                         Map.Rows[1].Cells[2].Style.BackColor = Color.DarkBlue;
+                        Outp.Text += "X1X2X3\n";
                     }
                     if (Map.Rows[1].Cells[3].Value.ToString() == "1")
                     {
                         Map.Rows[1].Cells[3].Style.BackColor = Color.DarkCyan;
+                        Outp.Text += "X1!X2X3\n";
                     }
-                    //
+                    //1 stroka 2 ki
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[0].Style.BackColor = Color.Violet;
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Violet;
+                        Outp.Text += "!X1!X2!X3+!X1X2!X3\n";
                     }
                     if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Khaki;
                         Map.Rows[0].Cells[2].Style.BackColor = Color.Khaki;
+                        Outp.Text += "!X1X3!X3+X1X2!X3\n";
                     }
                     if ((Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[2].Style.BackColor = Color.SaddleBrown;
                         Map.Rows[0].Cells[3].Style.BackColor = Color.SaddleBrown;
+                        Outp.Text += "X1X2!X3+X1!X2!X3\n";
                     }
                     if ((Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[0].Cells[0].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[3].Style.BackColor = Color.Red;
                         Map.Rows[0].Cells[0].Style.BackColor = Color.Red;
+                        Outp.Text += "!X1!X2!X3+X1!X2X3\n";
                     }
-                    //
+                    //2 stroka 2 ki
                     if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Yellow;
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Yellow;
+                        Outp.Text += "!X1X2X3+X1X2X3\n";
                     }
                     if ((Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1"))
                     {
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Orchid;
                         Map.Rows[1].Cells[2].Style.BackColor = Color.Orchid;
+                        Outp.Text += "!X1X2X3+X1X2X3\n";
+
                     }
                     if ((Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
                     {
                         Map.Rows[1].Cells[2].Style.BackColor = Color.Purple;
                         Map.Rows[1].Cells[3].Style.BackColor = Color.Purple;
+                        Outp.Text += "X1X2X3+X1!X2X3\n";
                     }
                     if ((Map.Rows[1].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
                     {
                         Map.Rows[1].Cells[3].Style.BackColor = Color.Gainsboro;
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Gainsboro;
+                        Outp.Text += "!X1!X2X3+X1!X2X3\n";
                     }
                     //
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[0].Style.BackColor = Color.Olive;
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Olive;
+                        Outp.Text += "!X1!X2!X3+!X1!X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Ivory;
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Ivory;
+                        Outp.Text += "!X1X2!X3+!X1X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[2].Style.BackColor = Color.PaleGreen;
                         Map.Rows[1].Cells[2].Style.BackColor = Color.PaleGreen;
+                        Outp.Text += "X1!X2!X3+X1X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
                     {
                         Map.Rows[0].Cells[3].Style.BackColor = Color.Orange;
                         Map.Rows[1].Cells[3].Style.BackColor = Color.Orange;
+                        Outp.Text += "X1!X2!X3+X1!X2X3\n";
                     }
                     //
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1"))
@@ -193,6 +246,7 @@ namespace WindowsFormsApplication1
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Tomato;
                         Map.Rows[0].Cells[2].Style.BackColor = Color.Tomato;
                         Map.Rows[0].Cells[3].Style.BackColor = Color.Tomato;
+                        Outp.Text += "!X1!X2!X3+!X1X2!X3+X1X2X3+X1!X2!X3\n";
                     }
                     if ((Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
                     {
@@ -200,6 +254,7 @@ namespace WindowsFormsApplication1
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Moccasin;
                         Map.Rows[1].Cells[2].Style.BackColor = Color.Moccasin;
                         Map.Rows[1].Cells[3].Style.BackColor = Color.Moccasin;
+                        Outp.Text += "!X1!X2X3+!X1X2X3+X1X2!X3+X1!X2X3\n";
                     }
                     //
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1"))
@@ -208,6 +263,7 @@ namespace WindowsFormsApplication1
                         Map.Rows[0].Cells[1].Style.BackColor = Color.Blue;
                         Map.Rows[1].Cells[0].Style.BackColor = Color.Blue;
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Blue;
+                        Outp.Text += "!X1!X2!X3+!X11X2X3+!X1X2!X3+!X1X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1"))
                     {
@@ -215,6 +271,7 @@ namespace WindowsFormsApplication1
                         Map.Rows[0].Cells[2].Style.BackColor = Color.Gold;
                         Map.Rows[1].Cells[1].Style.BackColor = Color.Gold;
                         Map.Rows[1].Cells[2].Style.BackColor = Color.Gold;
+                        Outp.Text += "!X1X2!X3+X1X2!X3+!X1X2X3+X1X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
                     {
@@ -222,6 +279,7 @@ namespace WindowsFormsApplication1
                         Map.Rows[0].Cells[3].Style.BackColor = Color.Green;
                         Map.Rows[1].Cells[2].Style.BackColor = Color.Green;
                         Map.Rows[1].Cells[3].Style.BackColor = Color.Green;
+                        Outp.Text += "X1X2!X3+X1X2X3+X1!X2!X3+X1!X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
                     {
@@ -229,6 +287,7 @@ namespace WindowsFormsApplication1
                         Map.Rows[1].Cells[0].Style.BackColor = Color.DarkRed;
                         Map.Rows[0].Cells[3].Style.BackColor = Color.DarkRed;
                         Map.Rows[1].Cells[3].Style.BackColor = Color.DarkRed;
+                        Outp.Text += "!X1!X2!X3+!X1!X2X3+X1!X2!X3+X1!X2X3\n";
                     }
                     if ((Map.Rows[0].Cells[0].Value.ToString() == "1") && (Map.Rows[0].Cells[1].Value.ToString() == "1") && (Map.Rows[0].Cells[2].Value.ToString() == "1") && (Map.Rows[0].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1") && (Map.Rows[1].Cells[1].Value.ToString() == "1") && (Map.Rows[1].Cells[2].Value.ToString() == "1") && (Map.Rows[1].Cells[3].Value.ToString() == "1"))
                     {
@@ -240,12 +299,14 @@ namespace WindowsFormsApplication1
                         Map.Rows[1].Cells[1].Style.BackColor = Color.DarkRed;
                         Map.Rows[1].Cells[2].Style.BackColor = Color.DarkRed;
                         Map.Rows[1].Cells[3].Style.BackColor = Color.DarkRed;
+                        Outp.Text += "!X1!X2!X3+!X1!X2X3+!X1X2!X3+!X1X2X3+ X1X2!X3 + X1X2X3 + X1!X2!X3 + X1!X2X3\n";
                     }
                     ; break;
                 case "4":
                     if (Map.Rows[0].Cells[0].Value.ToString() == "1")
                     {
                         Map.Rows[0].Cells[0].Style.BackColor = Color.Gray;
+                        Outp.Text += "";
                     }
                     if (Map.Rows[0].Cells[1].Value.ToString() == "1")
                     {
@@ -365,10 +426,10 @@ namespace WindowsFormsApplication1
                         Map.Rows[2].Cells[2].Style.BackColor = Color.SandyBrown;
                         Map.Rows[2].Cells[3].Style.BackColor = Color.SandyBrown;
                     }
-                    if ((Map.Rows[1].Cells[3].Value.ToString() == "1") && (Map.Rows[1].Cells[0].Value.ToString() == "1"))
+                    if ((Map.Rows[2].Cells[0].Value.ToString() == "1") && (Map.Rows[2].Cells[3].Value.ToString() == "1"))
                     {
-                        Map.Rows[2].Cells[3].Style.BackColor = Color.Firebrick;
                         Map.Rows[2].Cells[0].Style.BackColor = Color.Firebrick;
+                        Map.Rows[2].Cells[3].Style.BackColor = Color.Firebrick;
                     }
                     //s 4
                     if ((Map.Rows[3].Cells[0].Value.ToString() == "1") && (Map.Rows[3].Cells[1].Value.ToString() == "1"))

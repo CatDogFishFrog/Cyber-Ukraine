@@ -47,9 +47,9 @@
             // 
             // Paste
             // 
-            this.Paste.Location = new System.Drawing.Point(95, 80);
+            this.Paste.Location = new System.Drawing.Point(112, 80);
             this.Paste.Name = "Paste";
-            this.Paste.Size = new System.Drawing.Size(75, 23);
+            this.Paste.Size = new System.Drawing.Size(102, 33);
             this.Paste.TabIndex = 2;
             this.Paste.Text = "Склеить";
             this.Paste.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             this.VarF.Location = new System.Drawing.Point(32, 103);
             this.VarF.Name = "VarF";
             this.VarF.ReadOnly = true;
-            this.VarF.Size = new System.Drawing.Size(100, 20);
+            this.VarF.Size = new System.Drawing.Size(74, 20);
             this.VarF.TabIndex = 6;
             // 
             // VarS
@@ -136,7 +136,7 @@
             this.VarS.Multiline = true;
             this.VarS.Name = "VarS";
             this.VarS.ReadOnly = true;
-            this.VarS.Size = new System.Drawing.Size(19, 94);
+            this.VarS.Size = new System.Drawing.Size(19, 105);
             this.VarS.TabIndex = 7;
             // 
             // Build
@@ -158,10 +158,12 @@
             // 
             // Outp
             // 
+            this.Outp.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.Outp.Location = new System.Drawing.Point(220, 27);
             this.Outp.Name = "Outp";
+            this.Outp.ReadOnly = true;
             this.Outp.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Outp.Size = new System.Drawing.Size(460, 96);
+            this.Outp.Size = new System.Drawing.Size(541, 96);
             this.Outp.TabIndex = 11;
             this.Outp.Text = "";
             // 
